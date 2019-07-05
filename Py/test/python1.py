@@ -27,7 +27,7 @@ if index == 1.1 :
     oval = 0o3721
     xval = 0xffffa
     dval = 999
-
+    print(binval, oval, xval, dval)
 if index == 1.2 :
     print('\n******************1.2 Floating Point\n')
     dfloat = 9.999
