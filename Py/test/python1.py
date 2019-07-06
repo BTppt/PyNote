@@ -21,33 +21,31 @@ Python 3.x                                              \n
 ''')
 index = 1.1
 
-if index == 1.1 :
+if index == 1.1:
     print('\n******************1.1 Integer\n')
     binval = 0b10101
     oval = 0o3721
     xval = 0xffffa
     dval = 999
     print(binval, oval, xval, dval)
-if index == 1.2 :
+if index == 1.2:
     print('\n******************1.2 Floating Point\n')
     dfloat = 9.999
     sfloat = 3.14e5
 
-if index == 1.3 :
+if index == 1.3:
     print('\n******************1.3 Complex number\n')    
     cval = 3+2j
     cval = complex(3,2)
 
-if index == 1.4 :
+if index == 1.4:
     print('\n******************1.4 String\n')
 
-if index == 1.5 :
+if index == 1.5:
     print('\n******************\n') 
 
-if index == 1.6 :
+if index == 1.6:
     print('\n******************\n')
 
-print 'abc'
-
-if index == 1.1
+if index == 1.1:
     print('\n******************\n')
