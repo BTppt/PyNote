@@ -1,23 +1,23 @@
 print('''
-Python 3.x                                              \n
-1 Data type                                             \n
-1.1 Integer                                             \n
-1.2 Floating Point                                      \n
-1.3 Complex number                                      \n
-1.4 String                                              \n
-1.5 Operators                                           \n
-1.6 List                                                \n
-1.7 Tuple                                               \n
-1.8 Dict                                                \n
-2 Control Structure                                     \n
-2.1 Selective Structure                                 \n
-2.2 Loop Structure                                      \n
-3 Function                                              \n
-3.1 Definition                                          \n
-3.2 Lambda Function                                     \n
-4 Class                                                 \n
-4.1 Definition                                          \n
-4.2 Inheritance and derive                              \n
+Python 3.x                                              
+1 Data type                                             
+    1.1 Integer                                             
+    1.2 Floating Point                                      
+    1.3 Complex number                                      
+    1.4 String                                              
+    1.5 Operators                                           
+    1.6 List                                                
+    1.7 Tuple                                               
+    1.8 Dict                                                
+2 Control Structure                                     
+    2.1 Selective Structure                                 
+    2.2 Loop Structure                                      
+3 Function                                              
+    3.1 Definition                                          
+    3.2 Lambda Function                                     
+4 Class                                                 
+    4.1 Definition                                          
+    4.2 Inheritance and derive                              
 ''')
 index = float(input())
 print(index)
@@ -110,9 +110,66 @@ if index == 1.5:
 
 if index == 1.6:
     print('\n******************1.6 List\n')
+    # construct
+    L = ["List ", "is ", "changeable", 1]
+    print(L)
+    print(L[-3:-1])
+    # Unpacking
+    a, b, c, d = L
+    print(a, b, c, d)
+    print(type(a))
+    first, *rest = L
+    print(first, rest)
+    first, *rest, last = L
+    print(first, rest, last)
+    # Packing
+    mypackage = a, b, c, d
+    print(mypackage)
+    print(type(mypackage))
+    num1, num2, char1 = 1, 2, 'c'
+    print(num1, num2, char1)
+    # Method
+    print(L.append('ex'))
+    print(L.extend(L))
+    print(L.insert(3, '3'))
+    del L[0:2]
+    print(L)
+    
+    dir(list)
 
 if index == 1.7:
     print('\n******************1.7 Tuple\n')
+    # construct
+    T = ('Tuple ', 'is ', 'not ', 'changeable')
+    print(T)
+    T = ('Single',)
+    print(type(T))
+    # casting
+    T = tuple(list(range(10)))
+    L = list(tuple(range(10)))
+    print(T, '\n', L)
+    # List & Tuple
+    L = ['1', '2', '3']
+    print((L+L)*2)
+    print(type(L))
+    print(len(L))
+    dir(tuple)
 
 if index == 1.8:
     print('\n******************1.8 Dict\n')
+    my_dict = {'math': 140, 'english': 120, 'Chinese': 103}
+    print(my_dict)
+    print(my_dict['math'])
+
+if index == 2.1:
+    print('\n******************2.1 Selective Structure\n')
+if index == 2.2:
+    print('\n******************2.2 Loop Structure\n')
+if index == 3.1:
+    print('\n******************3.1 Definition\n')
+if index == 3.2:
+    print('\n******************3.2 Lambda Function\n')
+if index == 4.1:
+    print('\n******************4.1 Definition\n')
+if index == 4.2:
+    print('\n******************4.2 Inheritance and derive\n')
