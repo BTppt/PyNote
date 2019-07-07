@@ -273,8 +273,25 @@ if index == 3.2:
 
 if index == 4.1:
     print('\n******************4.1 Definition\n')
+    # class variables and instance variables
+    class Polygon:
+        xpos = 0
+        ypos = 0
+        def __init__(self, vertex, angles):
+            self.__vertex__ = vertex
+            self.__angles__ = angles
+        def vertexnum(self):
+            return self.__vertex__
+    polygon1 = Polygon(3,[60, 60, 60])
+    polygon2 = Polygon(4, (90, 90, 90, 90))
+    polygon1.xpos= 4
+    print(polygon2.xpos)
+    Polygon.xpos = 8
+    print(polygon1.xpos)
+    print(polygon2.xpos)
+
 
 if index == 4.2:
     print('\n******************4.2 Inheritance and derive\n')
-    
+
 
