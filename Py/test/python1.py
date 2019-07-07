@@ -1,4 +1,4 @@
-print('''
+print("""
 Python 3.x                                              
 1 Data type                                             
     1.1 Integer                                             
@@ -18,7 +18,7 @@ Python 3.x
 4 Class                                                 
     4.1 Definition                                          
     4.2 Inheritance and derive                              
-''')
+""")
 index = float(input())
 print(index)
 
@@ -157,19 +157,141 @@ if index == 1.7:
 
 if index == 1.8:
     print('\n******************1.8 Dict\n')
+    # construction > key-value >> unchangeable-changeable
     my_dict = {'math': 140, 'english': 120, 'Chinese': 103}
+    my_dict = dict([('math', 140), ('english', 120), ('Chinese', 103)])
     print(my_dict)
     print(my_dict['math'])
+    # append
+    my_dict['physic'] = 100
+    print(my_dict)
+    # del
+    del my_dict['physic']
+    print(my_dict)
+    # judgement
+    print('math' in my_dict)
+    # method
+    my_dict.update([('math', 100), ('nature', 100)])
+    print(my_dict)
+    # traverse
+    for key in my_dict.keys():
+        print(key)
+    for value in my_dict.values():
+        print(value)
+    for item in my_dict.items():
+        print(item)
+    for key, value in my_dict.items():
+        print(key, value)
+    # other method
+    print(my_dict.popitem())
+    print(my_dict.setdefault('math'))
 
 if index == 2.1:
     print('\n******************2.1 Selective Structure\n')
+    c = -1
+    # if statement
+    if c > 0:
+        print('c > 0')
+    elif c == 0:
+        print('c == 0')
+    else:
+        print('c < 0')
+
 if index == 2.2:
     print('\n******************2.2 Loop Structure\n')
+    # while statement
+    c = -5
+    while c < 0:
+        print(c)
+        c += 1
+    else:
+        print(c)
+    # for statement
+    for k in range(4):
+        print(k)
+
 if index == 3.1:
     print('\n******************3.1 Definition\n')
+    # positional and keyword-only argument
+
+    def myfun(p1, p2=0):
+        """
+        param p1: the added number 1
+        param p2: the added number 2
+        return: the sum
+        """
+        p1 = p1 ** p2
+        return p1
+    print(myfun(2, 3))
+    print(myfun(p2=4, p1=2))
+    print(myfun(2))
+    print(myfun.__doc__)
+    # support packing and unpacking >> using Tuple
+
+    def unpacking(p1, p2, p3):
+        return [p1, p2, p3]
+
+    def packing(p1, p2, p3):
+        return p1, p2, p3
+
+    return_para_tuple = packing(1, 2, 3)
+    print(return_para_tuple)
+    return_p1, return_p2, return_p3 = unpacking('p1', 'p2', 'p3')
+    print(return_p1, return_p2, return_p3)
+    # arguments collection
+
+    def tsum(p1, *rp, p2):
+        thesum = p1 + p2
+        for num in rp:
+            thesum += num
+        return thesum
+
+    # print(tsum(1, 2, 3, 4)) >> TypeError: tsum() missing 1 required keyword-only argument: 'p2'
+    print(tsum(1, 2, 3, p2=4))
+    print(tsum(1, p2=4))          # *rp can be empty
+
+    def dictshow(number, *subjects, **table):
+        print('the number of subjects is ', number)
+        print('containing: ', subjects)
+        print('scores: ', table)
+
+    dictshow(3, 'Math', 'Chines', 'Nature', Math=100, Chinese=100, Nature=100)
+    # reverse argument collection
+
+    def acmu(mp1, mp2):
+        return mp1*mp2
+
+    mp = (3, 4)
+    print(acmu(*mp))
+    mp = {'mp1': 3, 'mp2': 4}
+    print(acmu(**mp))
+
 if index == 3.2:
     print('\n******************3.2 Lambda Function\n')
+    func = lambda n: n**n
+    print(func(2))
+
 if index == 4.1:
     print('\n******************4.1 Definition\n')
+    # class variables and instance variables
+    class Polygon:
+        xpos = 0
+        ypos = 0
+        def __init__(self, vertex, angles):
+            self.__vertex__ = vertex
+            self.__angles__ = angles
+        def vertexnum(self):
+            return self.__vertex__
+    polygon1 = Polygon(3,[60, 60, 60])
+    polygon2 = Polygon(4, (90, 90, 90, 90))
+    polygon1.xpos= 4
+    print(polygon2.xpos)
+    Polygon.xpos = 8
+    print(polygon1.xpos)
+    print(polygon2.xpos)
+
+
 if index == 4.2:
     print('\n******************4.2 Inheritance and derive\n')
+
+

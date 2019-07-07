@@ -1,5 +1,2 @@
-# Special Library
-import tkinter
+# Advanced Feature and Related Built-in Lib
 
-for k in range(10):
-    print(k)
