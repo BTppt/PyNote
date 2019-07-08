@@ -1,0 +1,10 @@
+{
+    "math": 90,
+    "chinese": 100,
+    "english": 120,
+    "nature": 110,
+    "other": {
+        "Sa": 120,
+        "Sb": 130
+    }
+}

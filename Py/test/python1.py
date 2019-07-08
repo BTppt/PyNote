@@ -17,7 +17,10 @@ Python 3.x
     3.2 Lambda Function                                     
 4 Class                                                 
     4.1 Definition                                          
-    4.2 Inheritance and derive                              
+    4.2 Inheritance and derive         
+5 Exception
+    5.1 Syntax
+    5.2 Built-in Exception                     
 """)
 index = float(input())
 print(index)
@@ -333,3 +336,9 @@ if index == 4.2:
     rect1 = Rect(4, [90, 90, 90, 90])
     print(rect1.xpos)
     print(rect1.ypos)
+
+if index == 5.1:
+    print('\n******************5.1 Syntax\n')
+
+if index == 5.22:
+    print('\n******************5.2 Built-in Exception\n')
