@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 import torch
 import torch.nn as nn
 import torch.cuda
@@ -6,7 +5,8 @@ import torch.nn.functional as f
 import torchvision
 from torchvision import transforms
 import numpy as np
-import torchsnooper
+#import torchsnooper
+import matplotlib.pyplot as plt
 
 dataset = torchvision.datasets.MNIST(root='E:/dataset/',download=False,transform=transforms.ToTensor(),train=True)
 dataloader = torch.utils.data.DataLoader(dataset,batch_size=256)
@@ -31,7 +31,7 @@ class LeNet(nn.Module):
         self.fc2 = nn.Linear(120,84)
         self.fc3 = nn.Linear(84,10)
         self.pool2d = nn.MaxPool2d(2)
-    @torchsnooper.snoop()
+    #@torchsnooper.snoop()
     def forward(self,x):
         output = f.relu(self.conv1(x))
         output = self.pool2d(output)

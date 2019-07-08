@@ -284,6 +284,7 @@ if index == 3.2:
     @funa
     def funb():
         print('B')
+
     print(funb)
 
 if index == 4.1:

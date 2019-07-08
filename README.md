@@ -7,7 +7,8 @@ A folder where storing the code used to learn and test code
 ## Py
 python test code\
 test -- brief introduction and built-in feature\
-torch  -- third-party lib
+torch  -- third-party lib\
+miscellaneous -- some simple third-party libs
 ### test
 * python1.py\
 brief introduction and test code\
