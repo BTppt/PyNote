@@ -1,5 +1,5 @@
 # Note
-A folder where storing the code used to learn and test code
+A folder where storing the code used to learn python and related libs
 ## Cpp
 ### mycpp.md
 ### cpptest
