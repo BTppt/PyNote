@@ -14,9 +14,10 @@ miscellaneous -- some simple third-party libs
 brief introduction and test code\
 * python2.py\
 avanced feaure and related built-in lib\
-### torch
+#### torch
 An open source deep learning platform that provides a seamless path\
 from research prototyping to production deployment
 * torch1.py
 * torch2.py\
 training a LeNet over MNIST using single GPU
+### perceptron 
