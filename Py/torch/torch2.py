@@ -21,6 +21,7 @@ class LeNet(nn.Module):
         self.fc3 = nn.Linear(84,10)
         self.pool2d = nn.MaxPool2d(2)
     #@torchsnooper.snoop()
+    
     def forward(self,x):
         output = f.relu(self.conv1(x))
         output = self.pool2d(output)
