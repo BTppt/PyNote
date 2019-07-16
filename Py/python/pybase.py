@@ -40,8 +40,8 @@ if index == 1.2:
     print(dfloat, sfloat)
 
 if index == 1.3:
-    print('\n******************1.3 Complex number\n')    
-    cval0 = 3+2j
+    print('\n******************1.3 Complex number\n')
+    cval0 = 3 + 2j
     cval2 = complex(3, -2)
     print(cval0, cval2)
 
@@ -53,7 +53,7 @@ if index == 1.4:
     strval4 = 'It\'s Python 3.x'
     print(strval1, '\n', strval2, '\n', strval3, '\n', strval4, '\n')
     # append
-    print('It is '+'Python '+str(3)+'.x')
+    print('It is ' + 'Python ' + str(3) + '.x')
     print(r'That\'s a escape character : \n')
     # Bytes String and casting
     bstr = b'abc'
@@ -88,7 +88,7 @@ if index == 1.5:
     # Arithmetic operators
     a = 5.0
     b = 2.0
-    print(a/b, a//b, a % b, a*b, a+b, a-b, a**b)
+    print(a / b, a // b, a % b, a * b, a + b, a - b, a ** b)
     # Index operator
     c = "01234567"
     print(c[1:4])
@@ -137,7 +137,7 @@ if index == 1.6:
     print(L.insert(3, '3'))
     del L[0:2]
     print(L)
-    
+
     dir(list)
 
 if index == 1.7:
@@ -153,7 +153,7 @@ if index == 1.7:
     print(T, '\n', L)
     # List & Tuple
     L = ['1', '2', '3']
-    print((L+L)*2)
+    print((L + L) * 2)
     print(type(L))
     print(len(L))
     dir(tuple)
@@ -215,6 +215,7 @@ if index == 2.2:
 
 if index == 3.1:
     print('\n******************3.1 Definition\n')
+
     # positional and keyword-only argument
 
     def myfun(p1, p2=0):
@@ -225,22 +226,28 @@ if index == 3.1:
         """
         p1 = p1 ** p2
         return p1
+
+
     print(myfun(2, 3))
     print(myfun(p2=4, p1=2))
     print(myfun(2))
     print(myfun.__doc__)
+
     # support packing and unpacking >> using Tuple
 
     def unpacking(p1, p2, p3):
         return [p1, p2, p3]
 
+
     def packing(p1, p2, p3):
         return p1, p2, p3
+
 
     return_para_tuple = packing(1, 2, 3)
     print(return_para_tuple)
     return_p1, return_p2, return_p3 = unpacking('p1', 'p2', 'p3')
     print(return_p1, return_p2, return_p3)
+
     # arguments collection
 
     def tsum(p1, *rp, p2):
@@ -249,20 +256,25 @@ if index == 3.1:
             thesum += num
         return thesum
 
+
     # print(tsum(1, 2, 3, 4)) >> TypeError: tsum() missing 1 required keyword-only argument: 'p2'
     print(tsum(1, 2, 3, p2=4))
-    print(tsum(1, p2=4))          # *rp can be empty
+    print(tsum(1, p2=4))  # *rp can be empty
+
 
     def dictshow(number, *subjects, **table):
         print('the number of subjects is ', number)
         print('containing: ', subjects)
         print('scores: ', table)
 
+
     dictshow(3, 'Math', 'Chines', 'Nature', Math=100, Chinese=100, Nature=100)
+
     # reverse argument collection
 
     def acmu(mp1, mp2):
-        return mp1*mp2
+        return mp1 * mp2
+
 
     mp = (3, 4)
     print(acmu(*mp))
@@ -272,8 +284,9 @@ if index == 3.1:
 if index == 3.2:
     print('\n******************3.2 Lambda Function and Function modifier\n')
     # Lambda
-    func = lambda n: n**n
+    func = lambda n: n ** n
     print(func(2))
+
     # modifier
 
     def funa(fn):
@@ -281,31 +294,38 @@ if index == 3.2:
         fn()
         return 'fkit'
 
+
     @funa
     def funb():
         print('B')
+
 
     print(funb)
 
 if index == 4.1:
     print('\n******************4.1 Definition\n')
+
     # class variables and instance variables
     class Polygon:
         xpos = 0
         ypos = 0
+
         def __init__(self, vertex, angles):
             self.__vertex__ = vertex
             self.__angles__ = angles
+
         def vertexnum(self):
             return self.__vertex__
+
         # static method
         @staticmethod
         def count(self):
             self.xpos += 1
 
-    polygon1 = Polygon(3,[60, 60, 60])
+
+    polygon1 = Polygon(3, [60, 60, 60])
     polygon2 = Polygon(4, (90, 90, 90, 90))
-    polygon1.xpos= 4
+    polygon1.xpos = 4
     print(polygon2.xpos)
     Polygon.xpos = 8
     print(polygon1.xpos)
@@ -316,23 +336,30 @@ if index == 4.1:
     Polygon.count(polygon1)
     print(polygon1.xpos)
     del Polygon.xpos
-    #print(Polygon.xpos) >>AttributeError: type object 'Polygon' has no attribute 'xpos'
+    # print(Polygon.xpos) >>AttributeError: type object 'Polygon' has no attribute 'xpos'
 
 if index == 4.2:
     print('\n******************4.2 Inheritance and derive\n')
+
+
     class Polygon:
         xpos = 0
         ypos = 0
+
         def __init__(self, vertex, angles):
             self.__vertex__ = vertex
             self.__angles__ = angles
+
         def vertexnum(self):
             return self.__vertex__
-    class  Rect(Polygon):
+
+
+    class Rect(Polygon):
         def __init__(self, vertex, angles):
             super(Rect, self).__init__(vertex, angles)
             self.xpos = 1
             self.ypos = 2
+
 
     rect1 = Rect(4, [90, 90, 90, 90])
     print(rect1.xpos)
