@@ -22,14 +22,14 @@ print(sys.version)
 print(os.getenv('PATH'))
 
 # json >> JSON encoder and decoder
-myjson = json.dumps({'math':90, 'chinese':100},indent=4)
+myjson = json.dumps({'math': 90, 'chinese': 100}, indent=4)
 print(myjson)
 print(type(myjson))
 data = json.loads(myjson)
 print(data)
 print(type(data))
 
-mfp = open('mine.json','r')
+mfp = open('mine.json', 'r')
 temp = json.load(mfp)
 print(type(temp))
 for item in temp.items():
@@ -37,10 +37,9 @@ for item in temp.items():
 mfp.close()
 
 mfp = open('mine.json', 'w')
-json.dump(temp,fp=mfp,indent=4)
+json.dump(temp, fp=mfp, indent=4)
 mfp.close()
 
-# fileinput >> Iterate over lines from multiple input streams
 
 
 
