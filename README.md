@@ -1,5 +1,8 @@
 # Note
 A folder where storing the code used to learn python and related libs
+## Contents
+1. [C plus plus](#Cpp)
+2. [Python](#Py)
 ## Cpp
 ### mycpp.md
 ### cpptest
