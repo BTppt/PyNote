@@ -44,3 +44,7 @@
 ## Exception
 ### Syntax
 ### Built-in Exception 
+
+|  t1  |  er  |
+| ---- | ---- |
+| a    |  b   |
