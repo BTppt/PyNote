@@ -1,3 +1,3 @@
 # Notes
 
-## Multimodal Machine Learning: A Survey
+## Multimodal Machine Learning: A Survey and Taxonomy
