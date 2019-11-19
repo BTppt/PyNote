@@ -1,4 +1,4 @@
-# CUDA version
+# CPU version
 import torch.nn as nn
 import torch.cuda
 import torch.nn.functional as f
@@ -7,7 +7,7 @@ from torchvision import transforms
 import numpy as np
 import matplotlib.pyplot as plt
 
-dataset = torchvision.datasets.MNIST(root='E:/dataset/', download=False, transform=transforms.ToTensor(), train=True)
+dataset = torchvision.datasets.MNIST(root='D:/dataset/', download=False, transform=transforms.ToTensor(), train=True)
 dataloader = torch.utils.data.DataLoader(dataset, batch_size=256)
 
 # network
@@ -34,17 +34,14 @@ class LeNet(nn.Module):
 
 
 # train
-cuda0 = torch.device('cuda')
-criterion = nn.CrossEntropyLoss().cuda(cuda0)
-model = LeNet().cuda(cuda0)
+criterion = nn.CrossEntropyLoss()
+model = LeNet()
 optimizer = torch.optim.SGD(model.parameters(), lr=0.1)
 
 for i in range(10):
     print("In epoch {}:".format(i))
     loss_record = []
     for imgs, labels in dataloader:
-        imgs = imgs.to(cuda0)
-        labels = labels.to(cuda0)
         preds = model(imgs)
         loss = criterion(preds, labels)
         optimizer.zero_grad()
@@ -60,4 +57,4 @@ dataset_test = torchvision.datasets.MNIST(root="E:/dataset/", download=False, tr
 plt.imshow(dataset_test[0][0].squeeze().numpy())
 plt.show()
 print(dataset_test[0][1])
-print(model(dataset_test[0][0].unsqueeze(0).cuda(cuda0)).softmax(-1).argmax())
+print(model(dataset_test[0][0].unsqueeze(0)).softmax(-1).argmax())
