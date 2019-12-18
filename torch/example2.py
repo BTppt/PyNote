@@ -7,7 +7,7 @@ from torchvision import transforms
 import numpy as np
 import matplotlib.pyplot as plt
 
-dataset = torchvision.datasets.MNIST(root='D:/dataset/', download=False, transform=transforms.ToTensor(), train=True)
+dataset = torchvision.datasets.MNIST(root='D:/dataset/', download=True, transform=transforms.ToTensor(), train=True)
 dataloader = torch.utils.data.DataLoader(dataset, batch_size=256)
 
 # network
