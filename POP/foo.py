@@ -103,3 +103,19 @@ foo = foo10(True)
 print(foo(4))
 foo = foo10(False)
 print(foo(3, 2))
+
+
+# function decorator
+def foo11(foo):
+    print('foo11')
+    print(foo(3, 4))
+    return 1
+
+
+@foo11
+def foo12(i0, i1):
+    return i0 + i1
+
+
+print(foo12)
+
