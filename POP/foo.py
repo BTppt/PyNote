@@ -118,3 +118,16 @@ def foo12(i0, i1):
 
 foo = foo12
 print(foo(3, 4))
+
+
+# generator
+def foo13(i0):
+    cur = 0
+    for num in range(0, i0):
+        cur += num
+        yield cur
+
+
+ct = foo13(10)
+print(next(ct))
+print(next(ct))
