@@ -116,8 +116,7 @@ def foo12(i0, i1):
     return i0 + i1
 
 
-foo = foo12
-print(foo(3, 4))
+print(foo12(3, 4))
 
 
 # generator

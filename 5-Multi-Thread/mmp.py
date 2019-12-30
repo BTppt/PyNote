@@ -21,4 +21,4 @@ for num in range(0, len(T)):
 
 print('END')
 
-# synchronization lock
+# synchronization: Lock & RLock
