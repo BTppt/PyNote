@@ -1,8 +1,16 @@
 from pathlib import *
 import os
 
-
-# file path
+# Input and Output
+msg = input('Please input: ')
+print(msg)
+# formatted string literals
+year = 2019
+event = 'Referendum'
+print(f'Results of {year} {event}')
+# format method
+print('{} data event {} '.format(year, event))
+# File path and Operation
 file_path_s = PureWindowsPath('.\\resource\\test.txt')
 print(file_path_s)
 file_path = Path('.\\resource\\test.txt')
