@@ -1,6 +1,6 @@
 # CPU version
 import torch.nn as nn
-import torch.cuda
+import torch
 import torch.nn.functional as f
 import torchvision
 from torchvision import transforms
