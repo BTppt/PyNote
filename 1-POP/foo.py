@@ -119,6 +119,23 @@ def foo12(i0, i1):
 print(foo12(3, 4))
 
 
+def decorator(foot):
+
+    def fo(*k, **d):
+        if type(k[0]) == str:
+            foot()
+        else:
+            print('error type')
+
+    return fo
+
+
+@decorator
+def foo(flag='train', vector='word2vector', graph=True):
+    print(flag, vector, graph)
+    return 1
+
+
 # generator
 def foo13(i0):
     cur = 0
