@@ -24,5 +24,3 @@ plt.subplot(133)
 plt.plot(names, values)
 plt.suptitle('Categorical Plotting')
 plt.show()
-
-

@@ -14,3 +14,4 @@ class C0:
     @staticmethod
     def info():           # static method
         print('this is class C0')
+

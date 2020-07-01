@@ -7,10 +7,12 @@ from torchvision import transforms
 import numpy as np
 import matplotlib.pyplot as plt
 
-dataset = torchvision.datasets.MNIST(root='E:/dataset/', download=False, transform=transforms.ToTensor(), train=True)
+dataset = torchvision.datasets.MNIST(root='D:\\DataSet\\', download=False, transform=transforms.ToTensor(), train=True)
 dataloader = torch.utils.data.DataLoader(dataset, batch_size=256)
 
 # network
+
+
 class LeNet(nn.Module):
     def __init__(self):
         super(LeNet, self).__init__()
@@ -35,7 +37,7 @@ class LeNet(nn.Module):
 
 # train
 cuda0 = torch.device('cuda')
-criterion = nn.CrossEntropyLoss().cuda(cuda0)
+criterion = nn.CrossEntropyLoss()
 model = LeNet().cuda(cuda0)
 optimizer = torch.optim.SGD(model.parameters(), lr=0.1)
 

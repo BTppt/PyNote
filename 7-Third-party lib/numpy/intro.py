@@ -33,7 +33,7 @@ print(x.max())
 print(x.sum())
 print(np.exp(x))
 # random number
-print(np.random.random_integers(0, 5, size=(3, 3)))
+print(np.random.randint(0, 5, size=(3, 3)))
 rng = np.random.default_rng()
 print(rng.standard_normal(10))
 
