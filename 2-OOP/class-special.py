@@ -15,3 +15,26 @@ class C0:
     def info():           # static method
         print('this is class C0')
 
+
+class DG:
+
+    def __init__(self, max_num):
+        self.max_num = max_num
+        self.num = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.num < self.max_num:
+            self.num = self.num + 1
+            return self.num
+        else:
+            raise StopIteration()
+
+
+if __name__ == '__main__':
+    import time
+    for n in DG(6):
+        print(n)
+        time.sleep(0.5)

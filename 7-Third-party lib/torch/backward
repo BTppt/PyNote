@@ -1,0 +1,13 @@
+import torch
+import torch.nn as nn
+
+x = torch.tensor([1., 2., 3.], requires_grad=True)
+y = x.max() * 4
+y.backward()
+print(x.grad)
+
+ml = nn.MaxPool1d(kernel_size=3, stride=1, padding=0)
+x = torch.rand(2, 4, 3, requires_grad=True)
+y = ml(x)
+y.sum().backward()
+
